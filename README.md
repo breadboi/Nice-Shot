@@ -8,3 +8,6 @@
   if (BlueGoals + 1 == m.readInt(rlgs.blueGoalPointer))
   if (OrangeGoals + 1 == m.readInt(rlgs.orangeGoalPointer))
 5. In these if statements, type Macro("Your desired keyname"); This will type the desired key for the desired goal.
+
+## Just using the .exe provided
+Put it anywhere you want as long as you have the memory.dll with the .exe
