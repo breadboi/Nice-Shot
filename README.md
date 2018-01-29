@@ -1,5 +1,5 @@
 # niceshot
-##Configuration
+## Configuration
 1. Open the MacroKeys.cs file.
 2. In the BuildKeyList method, you want to type MappedKeys["Your desired keyname"] = Key.keyname; 
    Available keynames are listed in WinAPI.cs so just type Key.anything that exists in that file. Example: Key.Backspace
