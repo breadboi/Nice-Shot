@@ -11,3 +11,4 @@
 
 ## Just using the .exe provided
 Put it anywhere you want as long as you have the memory.dll with the .exe
+By default, the program is set to press - on blue goals and = on orange goals.
