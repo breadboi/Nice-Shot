@@ -6,4 +6,4 @@
    Example: num3 for numpad3 key.
    Valid Macro keys are 0-9, numpad0-9, -, = 
 4. If you want to have a different scene for when you enter replay cam, then check the box and enter the key you have bound to that scene. (You might want to do this to prevent a scoreboard overlay from looking out of place)
-4. Done!
+4. Done! You can change these settings on the fly without having to restart the program.
