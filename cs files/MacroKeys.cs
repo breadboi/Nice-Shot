@@ -14,15 +14,20 @@ namespace TwitchPlaysSharp.Utilities
         public void BuildKeyList()
         {
             LimitedKeys = new List<string>();
-            LimitedKeys.Add("start");
-
-
-            MappedKeys["ctrl"] = Key.ControlLeft;
-            MappedKeys["0"] = Key.Num0;            
+                      
+            MappedKeys["1"] = Key.Num1;
+            MappedKeys["2"] = Key.Num2;
+            MappedKeys["3"] = Key.Num3;
+            MappedKeys["4"] = Key.Num4;
+            MappedKeys["5"] = Key.Num5;
+            MappedKeys["6"] = Key.Num6;
+            MappedKeys["7"] = Key.Num7;
+            MappedKeys["8"] = Key.Num8;
+            MappedKeys["9"] = Key.Num9;
+            MappedKeys["0"] = Key.Num0;
             MappedKeys["-"] = Key.DashHyphonKey;
-            MappedKeys["="] = Key.PlusEqualsKey;   
-
-            MappedKeys["enter"] = Key.Enter;
+            MappedKeys["="] = Key.PlusEqualsKey;
+            
         }
 
         bool IsLimitedKey(string key)

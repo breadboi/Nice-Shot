@@ -72,14 +72,38 @@ namespace RLGO
                     //If amount of goals on blue team + 1 = memory reading of blue goals run this code (Runs if blue scores).
                     if (BlueGoals + 1 == m.readInt(rlgs.blueGoalPointer))
                     {
-                        //Send the desired key to be pressed for this event
-                        Macro("-");
+                        try
+                        {
+                            string key = textBox1.Text;
+                            double sAfter = Convert.ToDouble(textBox3.Text);
+                            double tLength = Convert.ToDouble(textBox4.Text);
+                            double tBtwn = Convert.ToDouble(textBox5.Text);
+                            string rKey = textBox6.Text;
+                            //Send the desired key to be pressed for this event
+                            Macro(key, sAfter, tLength, tBtwn, rKey);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("You most likely left a field blank.\n\nError: " + ex);
+                        }
                     }
                     //If amount of goals on orange team + 1 = memory reading of blue goals run this code (Runs if orange scores).
                     if (OrangeGoals + 1 == m.readInt(rlgs.orangeGoalPointer))
                     {
-                        //Send the desired key to be pressed for this event
-                        Macro("=");
+                        try
+                        {
+                            string key = textBox2.Text;
+                            double sAfter = Convert.ToDouble(textBox3.Text);
+                            double tLength = Convert.ToDouble(textBox4.Text);
+                            double tBtwn = Convert.ToDouble(textBox5.Text);
+                            string rKey = textBox6.Text;
+                            //Send the desired key to be pressed for this event
+                            Macro(key, sAfter, tLength, tBtwn, rKey);
+                        }
+                        catch(Exception ex)
+                        {                            
+                            MessageBox.Show("You most likely left a field blank.\n\nError: " + ex);
+                        }                        
                     }
 
                     //Set goal variables = memory reading of each goal.
@@ -97,10 +121,10 @@ namespace RLGO
                 }
             }
         }
-        public void Macro(string key)
+        public void Macro(string key, double secAfter, double transLength, double btwTrans, string returnKey)
         {
             MacroKeyPress mcp = new MacroKeyPress();
-            mcp.keyInput(key);
+            mcp.keyInput(key, secAfter, transLength, btwTrans, returnKey);
         }
         public class RLGameSettings
         {            
