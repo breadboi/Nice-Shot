@@ -78,9 +78,19 @@ namespace RLGO
                             double sAfter = Convert.ToDouble(textBox3.Text);
                             double tLength = Convert.ToDouble(textBox4.Text);
                             double tBtwn = Convert.ToDouble(textBox5.Text);
-                            string rKey = textBox6.Text.ToLower();
-                            //Send the desired key to be pressed for this event
-                            Macro(key, sAfter, tLength, tBtwn, rKey);
+                            string mKey = textBox6.Text.ToLower();
+                            if (checkBox1.Checked)
+                            {
+                                string rkey = textBox7.Text.ToLower();
+                                //Send the desired key to be pressed for this event
+                                Macro(key, sAfter, tLength, tBtwn, rkey, mKey);
+                            }
+                            else
+                            {
+                                string rKey = textBox6.Text.ToLower();
+                                //Send the desired key to be pressed for this event
+                                Macro(key, sAfter, tLength, tBtwn, rKey, mKey);
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -96,14 +106,24 @@ namespace RLGO
                             double sAfter = Convert.ToDouble(textBox3.Text);
                             double tLength = Convert.ToDouble(textBox4.Text);
                             double tBtwn = Convert.ToDouble(textBox5.Text);
-                            string rKey = textBox6.Text.ToLower();
-                            //Send the desired key to be pressed for this event
-                            Macro(key, sAfter, tLength, tBtwn, rKey);
+                            string mKey = textBox6.Text.ToLower();
+                            if (checkBox1.Checked)
+                            {
+                                string rkey = textBox7.Text.ToLower();
+                                //Send the desired key to be pressed for this event
+                                Macro(key, sAfter, tLength, tBtwn, rkey, mKey);
+                            }
+                            else
+                            {
+                                string rKey = textBox6.Text.ToLower();
+                                //Send the desired key to be pressed for this event
+                                Macro(key, sAfter, tLength, tBtwn, rKey, mKey);
+                            }
                         }
-                        catch(Exception ex)
-                        {                            
+                        catch (Exception ex)
+                        {
                             MessageBox.Show("You most likely left a field blank.\n\nError: " + ex);
-                        }                        
+                        }
                     }
 
                     //Set goal variables = memory reading of each goal.
@@ -121,10 +141,10 @@ namespace RLGO
                 }
             }
         }
-        public void Macro(string key, double secAfter, double transLength, double btwTrans, string returnKey)
+        public void Macro(string teamKey, double secondsAfter, double transitionLength, double btwTrans, string replayKey, string mainKey)
         {
             MacroKeyPress mcp = new MacroKeyPress();
-            mcp.keyInput(key, secAfter, transLength, btwTrans, returnKey);
+            mcp.keyInput(teamKey, secondsAfter, transitionLength, btwTrans, replayKey, mainKey);
         }
         public class RLGameSettings
         {            
