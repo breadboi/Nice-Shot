@@ -8,32 +8,32 @@ namespace RLGO
         //static IRCBot Bot;
         static MacroKeys mk = new MacroKeys();
 
-        public void keyInput(string teamKey, double secAfter, double transLength, double btwTrans, string transKey, string mainKey)
+        public void keyInput(string transOne, double bufferStart, double transLength, double replayLength, string transTwo, string transThree, string mainScene)
         {
             mk.BuildKeyList();
 
             /*Check that these are all valid keys*/
-            if(mk.IsValidKey(teamKey) && mk.IsValidKey(transKey) && mk.IsValidKey(mainKey))
+            if(mk.IsValidKey(transOne) && mk.IsValidKey(transTwo) && mk.IsValidKey(transThree) && mk.IsValidKey(mainScene))
             {                
-                System.Threading.Thread.Sleep(Convert.ToInt32(secAfter*1000));  //Wait user specified time after goal.
+                System.Threading.Thread.Sleep(Convert.ToInt32(bufferStart*1000));  //Wait user specified time after goal.
                 for(int x = 0; x < 6; x++)
                 {
-                    mk.DoKeypress(teamKey); //Macro for team color scene
+                    mk.DoKeypress(transOne); //Key for First Transition
                 }
                 System.Threading.Thread.Sleep(Convert.ToInt32(transLength*1000));   //Wait the length of the transition animation
                 for(int x = 0; x < 6; x++)
                 {
-                    mk.DoKeypress(transKey);    //Macro for middle scene
+                    mk.DoKeypress(transTwo);    //Key for Second Transition
                 }
-                System.Threading.Thread.Sleep(Convert.ToInt32(btwTrans*1000));  //Wait length of replay cam
+                System.Threading.Thread.Sleep(Convert.ToInt32(replayLength*1000));  //Wait length of replay cam
                 for (int x = 0; x < 6; x++)
                 {
-                    mk.DoKeypress(teamKey); //Macro for team scene again
+                    mk.DoKeypress(transThree); //Key for thrid Transition
                 }
                 System.Threading.Thread.Sleep(Convert.ToInt32(transLength * 1000)); //Wait length of transition animation
                 for (int x = 0; x < 6; x++)
                 {
-                    mk.DoKeypress(mainKey);    //Macro for main scene
+                    mk.DoKeypress(mainScene);    //Key for Main scene
                 }
             }
         }        

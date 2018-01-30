@@ -74,22 +74,23 @@ namespace RLGO
                     {
                         try
                         {
-                            string key = textBox1.Text.ToLower();
-                            double sAfter = Convert.ToDouble(textBox3.Text);
-                            double tLength = Convert.ToDouble(textBox4.Text);
-                            double tBtwn = Convert.ToDouble(textBox5.Text);
-                            string mKey = textBox6.Text.ToLower();
+                            string s1 = textBox1.Text.ToLower();
+                            double bufferToStart = Convert.ToDouble(textBox3.Text);
+                            double transLength = Convert.ToDouble(textBox4.Text);
+                            double replayTime = Convert.ToDouble(textBox5.Text);
+                            string s3 = textBox8.Text.ToLower();
+                            string mainScene = textBox6.Text.ToLower();
                             if (checkBox1.Checked)
                             {
-                                string rkey = textBox7.Text.ToLower();
+                                string s2 = textBox7.Text.ToLower();
                                 //Send the desired key to be pressed for this event
-                                Macro(key, sAfter, tLength, tBtwn, rkey, mKey);
+                                Macro(s1, bufferToStart, transLength, replayTime, s2, s3, mainScene);
                             }
                             else
                             {
-                                string rKey = textBox6.Text.ToLower();
+                                string s2 = textBox6.Text.ToLower();
                                 //Send the desired key to be pressed for this event
-                                Macro(key, sAfter, tLength, tBtwn, rKey, mKey);
+                                Macro(s1, bufferToStart, transLength, replayTime, s2, s3, mainScene);
                             }
                         }
                         catch (Exception ex)
@@ -102,22 +103,23 @@ namespace RLGO
                     {
                         try
                         {
-                            string key = textBox2.Text.ToLower();
-                            double sAfter = Convert.ToDouble(textBox3.Text);
-                            double tLength = Convert.ToDouble(textBox4.Text);
-                            double tBtwn = Convert.ToDouble(textBox5.Text);
-                            string mKey = textBox6.Text.ToLower();
+                            string s1 = textBox1.Text.ToLower();
+                            double bufferToStart = Convert.ToDouble(textBox3.Text);
+                            double transLength = Convert.ToDouble(textBox4.Text);
+                            double replayTime = Convert.ToDouble(textBox5.Text);
+                            string s3 = textBox8.Text.ToLower();
+                            string mainScene = textBox6.Text.ToLower();
                             if (checkBox1.Checked)
                             {
-                                string rkey = textBox7.Text.ToLower();
+                                string s2 = textBox7.Text.ToLower();
                                 //Send the desired key to be pressed for this event
-                                Macro(key, sAfter, tLength, tBtwn, rkey, mKey);
+                                Macro(s1, bufferToStart, transLength, replayTime, s2, s3, mainScene);
                             }
                             else
                             {
-                                string rKey = textBox6.Text.ToLower();
+                                string s2 = textBox6.Text.ToLower();
                                 //Send the desired key to be pressed for this event
-                                Macro(key, sAfter, tLength, tBtwn, rKey, mKey);
+                                Macro(s1, bufferToStart, transLength, replayTime, s2, s3, mainScene);
                             }
                         }
                         catch (Exception ex)
@@ -141,10 +143,10 @@ namespace RLGO
                 }
             }
         }
-        public void Macro(string teamKey, double secondsAfter, double transitionLength, double btwTrans, string replayKey, string mainKey)
+        public void Macro(string transOne, double bufferStart, double transLength, double replayLength, string transTwo, string transThree, string mainScene)
         {
             MacroKeyPress mcp = new MacroKeyPress();
-            mcp.keyInput(teamKey, secondsAfter, transitionLength, btwTrans, replayKey, mainKey);
+            mcp.keyInput(transOne, bufferStart, transLength, replayLength, transTwo, transThree, mainScene);
         }
         public class RLGameSettings
         {            

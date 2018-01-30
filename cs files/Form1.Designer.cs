@@ -51,6 +51,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -132,9 +134,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 71);
+            this.textBox1.Location = new System.Drawing.Point(265, 69);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(36, 20);
+            this.textBox1.Size = new System.Drawing.Size(135, 20);
             this.textBox1.TabIndex = 9;
             // 
             // label9
@@ -142,15 +144,15 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 71);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 13);
+            this.label9.Size = new System.Drawing.Size(152, 13);
             this.label9.TabIndex = 10;
-            this.label9.Text = "Macro key (Blue Goal)";
+            this.label9.Text = "Key pressed when Blue scores";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 99);
+            this.textBox2.Location = new System.Drawing.Point(265, 95);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(36, 20);
+            this.textBox2.Size = new System.Drawing.Size(135, 20);
             this.textBox2.TabIndex = 11;
             // 
             // label10
@@ -158,24 +160,24 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 98);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 13);
+            this.label10.Size = new System.Drawing.Size(166, 13);
             this.label10.TabIndex = 12;
-            this.label10.Text = "Macro key (Orange Goal)";
+            this.label10.Text = "Key pressed when Orange scores";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 125);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 13);
+            this.label11.Size = new System.Drawing.Size(247, 13);
             this.label11.TabIndex = 13;
-            this.label11.Text = "Delay after Scored";
+            this.label11.Text = "How many seconds until you start the first transition";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 125);
+            this.textBox3.Location = new System.Drawing.Point(265, 125);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(36, 20);
+            this.textBox3.Size = new System.Drawing.Size(135, 20);
             this.textBox3.TabIndex = 14;
             // 
             // label12
@@ -183,15 +185,15 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(12, 155);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.Size = new System.Drawing.Size(152, 13);
             this.label12.TabIndex = 15;
-            this.label12.Text = "Length of Scene";
+            this.label12.Text = "Length of your transition scene";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 155);
+            this.textBox4.Location = new System.Drawing.Point(265, 155);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(36, 20);
+            this.textBox4.Size = new System.Drawing.Size(135, 20);
             this.textBox4.TabIndex = 16;
             // 
             // label13
@@ -199,31 +201,31 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(10, 188);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 13);
+            this.label13.Size = new System.Drawing.Size(201, 13);
             this.label13.TabIndex = 17;
-            this.label13.Text = "Time between Trans.";
+            this.label13.Text = "How long to wait before the exit transition";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(144, 188);
+            this.textBox5.Location = new System.Drawing.Point(265, 185);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(36, 20);
+            this.textBox5.Size = new System.Drawing.Size(135, 20);
             this.textBox5.TabIndex = 18;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 215);
+            this.label14.Location = new System.Drawing.Point(10, 237);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 13);
+            this.label14.Size = new System.Drawing.Size(137, 13);
             this.label14.TabIndex = 19;
-            this.label14.Text = "Macro (Main Scene)";
+            this.label14.Text = "Key pressed for main scene";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(144, 215);
+            this.textBox6.Location = new System.Drawing.Point(265, 237);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(36, 20);
+            this.textBox6.Size = new System.Drawing.Size(135, 20);
             this.textBox6.TabIndex = 20;
             // 
             // checkBox1
@@ -243,12 +245,30 @@
             this.textBox7.Size = new System.Drawing.Size(36, 20);
             this.textBox7.TabIndex = 23;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 214);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(131, 13);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Key pressed for exit scene";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(265, 211);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(135, 20);
+            this.textBox8.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(213, 363);
+            this.ClientSize = new System.Drawing.Size(412, 367);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox6);
@@ -308,6 +328,8 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
 
