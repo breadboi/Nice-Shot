@@ -74,11 +74,11 @@ namespace RLGO
                     {
                         try
                         {
-                            string key = textBox1.Text;
+                            string key = textBox1.Text.ToLower();
                             double sAfter = Convert.ToDouble(textBox3.Text);
                             double tLength = Convert.ToDouble(textBox4.Text);
                             double tBtwn = Convert.ToDouble(textBox5.Text);
-                            string rKey = textBox6.Text;
+                            string rKey = textBox6.Text.ToLower();
                             //Send the desired key to be pressed for this event
                             Macro(key, sAfter, tLength, tBtwn, rKey);
                         }
@@ -92,11 +92,11 @@ namespace RLGO
                     {
                         try
                         {
-                            string key = textBox2.Text;
+                            string key = textBox2.Text.ToLower();
                             double sAfter = Convert.ToDouble(textBox3.Text);
                             double tLength = Convert.ToDouble(textBox4.Text);
                             double tBtwn = Convert.ToDouble(textBox5.Text);
-                            string rKey = textBox6.Text;
+                            string rKey = textBox6.Text.ToLower();
                             //Send the desired key to be pressed for this event
                             Macro(key, sAfter, tLength, tBtwn, rKey);
                         }

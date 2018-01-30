@@ -27,7 +27,17 @@ namespace TwitchPlaysSharp.Utilities
             MappedKeys["0"] = Key.Num0;
             MappedKeys["-"] = Key.DashHyphonKey;
             MappedKeys["="] = Key.PlusEqualsKey;
-            
+
+            MappedKeys["num1"] = Key.Numpad1;
+            MappedKeys["num2"] = Key.Numpad2;
+            MappedKeys["num3"] = Key.Numpad3;
+            MappedKeys["num4"] = Key.Numpad4;
+            MappedKeys["num5"] = Key.Numpad5;
+            MappedKeys["num6"] = Key.Numpad6;
+            MappedKeys["num7"] = Key.Numpad7;
+            MappedKeys["num8"] = Key.Numpad8;
+            MappedKeys["num9"] = Key.Numpad9;
+            MappedKeys["num0"] = Key.Numpad0;
         }
 
         bool IsLimitedKey(string key)
